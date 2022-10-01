@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="<?php echo $seo_keywords;?>"/>
+    <meta name="description" content="<?php echo $seo_description;?>"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+    <title><?php echo $seo_title;?></title>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/fullpage.css"/>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/global_css.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/demo.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/dome.css">
+</head>
+
+<body>
+<?php echo $contact['nav'];?>
+<div class="g_body">
+    <div class="i-banner-swiper">
+        <div class="swiper-container1 swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <?php if (!empty($banner)) {
+                    foreach ($banner as $v) { $imgs = explode(';', $v['images']); ?>
+                    <div class="swiper-slide">
+                    <div class="i-banner" style="background-image: url('<?php echo isset($imgs['0']) ? $path.'banner_index/images/'.$imgs['0'] : '';?>')">
+                        <div class="i-banner-view ani" swiper-animate-effect="lightSpeedIn"
+                             swiper-animate-duration="2s" swiper-animate-delay="0s">
+                            <div class="g_w">
+                                <div class="i-banner-text">
+                                    <img src="<?php echo isset($imgs['1']) ? $path.'banner_index/images/'.$imgs['1'] : '';?>" alt="">
+                                    <a class="g_r g_m_btn" href="javascript:;"><em>立即咨询</em> <i class="iconfont icon-rise"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    </div>
+                    <?php }
+                    }?>
+                    
+                
+
+            </div>
+        </div>
+        <div class="swiper-right">
+            <div class="i-pagination">
+                <span class="active"></span> <span class="length"> </span>
+            </div>
+            <div class="swiper-btn">
+                <div class="swiper-button swiper-button-prev swiper-button-prev1"><i
+                        class="iconfont icon-zuo"></i></div>
+                <b>|</b>
+                <div class="swiper-button swiper-button-next swiper-button-next1"><i
+                        class="iconfont icon-zuo"></i></div>
+            </div>
+        </div>
+        <div class="swiper-nav g_r g_gradient2_r">
+            <a class="g_r g_m_btn" href="javascript:;">
+                <i class="iconfont icon-zaixianzixun"></i>
+                <span>立即咨询</span>
+            </a>
+            <a class="g_r" href="">
+                <i class="iconfont icon-yanzheng"></i>
+                <span>报告验证</span>
+            </a>
+            <a class="g_r" href="">
+                <i class="iconfont icon-chaxun"></i>
+                <span>进度查询</span>
+            </a>
+        </div>
+    </div>
+    <div class="i_con1">
+        <div class="g_w">
+            <div class="i_title wow fadeInUp" data-wow-delay=".2s">
+                <span>行业解决方案</span>
+            </div>
+            <div class="view wow fadeInUp" data-wow-delay=".5s">
+                <div class="con_l">
+                    <div class="tab_nav">
+                        <ul class="g_gradient2">
+                            <?php if (!empty($solution_category)) { $m_order = 1;
+                            foreach ($solution_category as $v) { ?>
+                            <li class="<?php if ($m_order == 1){echo 'active';}?>"><a href="<?php echo $v['short_url'];?>"><i class="iconfont <?php echo $v['title2'];?>"></i> <?php echo $v['title1'];?>
+                                <i class="iconfont icon-baomo"></i></a></li>
+                            <?php $m_order++; }
+                            }?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="con_r">
+                    <div class="tab_body">
+                        <?php if (!empty($solution_category)) { $m_order = 1;
+                        foreach ($solution_category as $v) { ?>
+                            <div class="tab_con <?php if ($m_order == 1){echo 'active';}?>">
+                            <div class="n_list1">
+                                <?php if (!empty($v['child'])) {
+                                foreach ($v['child'] as $v_child) { ?>
+                                <div class="n_item1">
+                                    <a href="<?php echo $v_child['short_url'];?>">
+                                        <i class="icon iconfont <?php echo $v_child['title2'];?>"></i>
+                                        <span class="title"><?php echo $v_child['title1'];?> <i class="iconfont icon-zuo"></i></span>
+                                        <p>
+                                            <?php echo $v_child['description1'];?>
+                                        </p>
+                                    </a>
+                                </div>
+                                <?php }
+                                }?>
+                            </div>
+                        </div>
+                        <?php $m_order++; }
+                        }?>
+                        
+                    </div>
+
+                </div>
+            </div>
+            <a class=" g_m_btn g_btn" href="javascript:;"><span class="g_gradient1_r g_r">马上预约 免费为您提供解决方案</span> </a>
+        </div>
+    </div>
+    <div class="i_con2">
+        <div class="i_title  wow fadeInUp" data-wow-delay=".2s">
+            <span>我们的服务都有哪些？</span>
+        </div>
+        <div class="swiper_con  wow fadeInUp" data-wow-delay=".5s">
+            <div class="swiper-container swiper-container2">
+                <div class="swiper-wrapper">
+                    <?php if (!empty($service_category)) {
+                    foreach ($service_category as $v) { ?>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <span class="title"><?php echo $v['title1'];?></span>
+                            <p>
+                                <?php echo $v['description1'];?>
+                            </p>
+                            <a class="g_btn g_m_btn" href="javascript:;">
+                                <span class="g_r g_gradient1_r ">您的问题我来解决 获取一站式解决方案</span>
+                            </a>
+                        </div>
+                    </div>
+                    <?php }
+                    }?>
+                </div>
+                <div class="swiper_btn swiper-button-next swiper-button-next2"><i class="iconfont icon-zuo"></i>
+                </div>
+                <div class="swiper_btn swiper-button-prev swiper-button-prev2"><i class="iconfont icon-zuo"></i>
+                </div>
+            </div>
+            <div class="swiper-container swiper-container3">
+                <div class="swiper-wrapper">
+                    <?php if (!empty($service_category)) {
+                    foreach ($service_category as $v) { ?>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <i class="iconfont  <?php echo $v['title2'];?>"></i>
+                            <span><?php echo $v['title1'];?></span>
+                        </div>
+                    </div>
+                    <?php }
+                    }?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="i_con3">
+        <div class="view">
+            <div class="top">
+                <div class="i_title  wow fadeInUp" data-wow-delay=".2s">
+                    <b>standard</b>
+                    <span>我们的优惠套餐？</span>
+                    <p>
+                        我们是斯坦德集团，致力于提供多元化的检测研发服务，为品质生活创享信任。
+                    </p>
+                </div>
+                <div class="con_r  wow fadeInUp" data-wow-delay=".5s">
+                    <a class="g_btn g_m_btn" href="javascript:;"><span class="g_gradient1_r g_r">马上获取更多套餐优惠</span></a>
+                    <div class="btn_view">
+                        <div class="swiper_btn swiper-button-prev swiper-button-prev4"><i
+                                class="iconfont icon-zuo"></i></div>
+                        <div class="swiper_btn swiper-button-next swiper-button-next4"><i
+                                class="iconfont icon-zuo"></i></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper_con  wow fadeInUp" data-wow-delay=".2s">
+                <div class="swiper-container swiper-container4">
+                    <div class="swiper-wrapper">
+                        <?php if (!empty($discount_package)) {
+                        foreach ($discount_package as $v) { ?>
+                        <div class="swiper-slide">
+                            <div class="item_yh">
+                                <a href="<?php echo $v['short_url'];?>">
+                                    <span><?php echo $v['title2'];?></span>
+                                    <div class="title"><?php echo $v['title1'];?></div>
+                                    <p><?php echo $v['description1'];?></p>
+                                    <em><i class="iconfont icon-xiangyou-jiantou"></i>查看更多</em>
+                                </a>
+                            </div>
+                        </div>
+                        <?php }
+                        }?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="i_con4">
+        <div class="g_w">
+            <div class="view">
+                <div class="con_l">
+                    <div class="i_title  wow fadeInUp" data-wow-delay=".2s">
+                        <b>standard</b>
+                        <span>为什么选择斯坦德？</span>
+                    </div>
+                    <div class="text  wow fadeInUp" data-wow-delay=".2s">
+                        <p>
+                            斯坦德检测集团股份有限公司(英文" Standard Testing Group Co.,Ltd.")简称“斯坦德集团”，是一家以生物医药及生命科学领域为核心，
+                            深耕生态环境、综合贸易、创新服务等专业领域的综合型高科技服务企业。我们拥有CMA、CNAS、CNCA资质，及进出口商品检验鉴定、工程设计、建筑业施工、水利工程质量检测等资质…
+                        </p>
+                    </div>
+                    <div class="bottom  wow fadeInUp" data-wow-delay=".5s" >
+                        <a href="<?php echo site_url('about');?>#link3" class="item g_r">
+                            <div>
+                                <i class="iconfont icon-rongyuzizhi"></i>
+                                <span>荣誉资质</span>
+                            </div>
+
+                        </a>
+                        <a href="<?php echo site_url('about');?>#link4" class="item g_r ">
+                            <div>
+                                <i class="iconfont icon-yiqishebei"></i>
+                                <span>仪器设备</span>
+                            </div>
+                        </a>
+                        <a href="<?php echo site_url('about');?>#link2" class="item g_r ">
+                            <div>
+                                <i class="iconfont icon-network-full"></i>
+                                <span>服务网络</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="con_r">
+                    <div class="img"><img src="<?php echo $base_url;?>uploads/images/i_con4_1.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="i_con5">
+        <div class="g_w">
+            <div class="view">
+                <div class="con_l  wow fadeInUp" data-wow-delay=".2s">
+                    <span class="title">在线留言</span>
+                    <div class="form_view">
+
+                        <input type="text" placeholder="您的姓名" id="name">
+                        <input type="text" placeholder="电话" id="tel">
+                        <textarea type="text" laceholder="检测需求" id="message"></textarea>
+                        <button class="g_r" type="button" onclick="send_message_index()">提交</button>
+                    </div>
+                </div>
+                <script>
+                    function send_message_index() {
+                        var name = $('#name').val();
+                        var tel = $('#tel').val();
+                        var message = $('#message').val();
+                        $.post("<?php echo site_url('message/send_message_index');?>", {name:name,tel:tel,message:message}, function(data) {
+                            if (data.status == 1) {
+                                alert(data.message);
+                                location.reload(true);
+                            } else {
+                                alert(data.message);
+                            }
+                        }, 'json');
+                    }
+                </script>
+                <div class="con_c  wow fadeInUp" data-wow-delay=".4s">
+                    <div class="list">
+                        <div class="item">
+                            <i class="iconfont icon-dulitixi-copy-copy-copy-copy"></i>
+                            <p>
+                                第三方独立自营，建有多个专业实验室
+                            </p>
+                        </div>
+                        <div class="item">
+                            <i class="iconfont icon-dingzhi"></i>
+                            <p>
+                                按需求制定方案，专业工程师一对一服务
+                            </p>
+                        </div>
+                        <div class="item">
+                            <i class="iconfont icon-yizhanshifuwu"></i>
+                            <p>
+                                一站式检测研发，支持取样/寄送样检测
+                            </p>
+                        </div>
+                        <div class="item">
+                            <i class="iconfont icon-kuaisugaoxiao"></i>
+                            <p>
+                                快速报价更高效，离产品上市更近一步
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="con_r  wow fadeInUp" data-wow-delay=".6s">
+                    <p>
+                        <b>0</b>元获取 <br>
+                        一站式解决方案
+                    </p>
+                    <a class="g_gradient1_r g_r g_m_btn" href="javascript:;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="i_con6">
+        <div class="g_w">
+            <div class="view">
+                <div class="i_title  wow fadeInUp" data-wow-delay=".2s">
+                    <span>他们已经与我们取得了合作</span>
+                </div>
+                <div class="list g_r  wow fadeInUp" data-wow-delay=".5s">
+                    <?php if (!empty($partner)) {
+                    foreach ($partner as $v) { ?>
+                    <div class="item">
+                        <div class="img"><img src="<?php echo $path.'partner/thumb/'.$v['thumb'];?>" alt="<?php echo $v['title1'];?>"></div>
+                    </div>
+                    <?php }
+                    }?>
+                    <div class="item">
+                        <div class="img">
+                            <a class="g_btn g_m_btn g_p_c" href="javascript:;">
+                                <span class="g_r g_gradient1_r ">期待与您合作</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom"><img src="<?php echo $base_url;?>uploads/images/i_con6_12.png" alt=""></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="i_con7">
+        <div class="g_w">
+            <div class="view">
+                <div class="top " >
+                    <div class="i_title wow fadeInUp" data-wow-delay=".2s" >
+                        <b>standard</b>
+                        <span>每一小步都值得纪念</span>
+                        <p>
+                            一览斯坦德最新活动、新闻、资讯~
+                        </p>
+                    </div>
+                    <a class="g_btn" href="">
+                        <span class="g_r g_gradient1_r ">查看更多</span>
+                    </a>
+                </div>
+                <div class="list  wow fadeInUp" data-wow-delay=".5s">
+                    <?php if (!empty($news)) {
+                    foreach ($news as $v) { ?>
+                    <div class="item">
+                        <a href="<?php echo $v['short_url'];?>">
+                            <div class="item_top">
+                                <div class="date">
+                                    <b><?php echo date('m-d', $v['time1']);?></b><?php echo date('Y', $v['time1']);?>
+                                </div>
+                                <i class="iconfont icon-xiangyou-jiantou"></i>
+                            </div>
+                            <div class="title"><?php echo $v['title1'];?></div>
+                            <p><?php echo $v['description1'];?></p>
+                        </a>
+                    </div>
+                    <?php }
+                    }?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo $contact['nav_footer'];?>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper-4.2.6.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper.animate1.0.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/wow.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/hc-mobile-nav.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/global.js"></script>
+<script>
+
+    $('.tab_nav ul li').hover(function () {
+        var index = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $(this).parents('.i_con1 .view').find('.tab_con').eq(index).addClass('active').siblings().removeClass('active')
+    },function () {
+
+    });
+
+    var swiper1 = new Swiper('.swiper-container1', {
+        direction: 'horizontal',
+        loop: true,
+        effect: 'fade',
+        speed: 1000,
+        // simulateTouch: false,
+        // allowTouchMove: false,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next1',
+            prevEl: '.swiper-button-prev1',
+        },
+
+        on: {
+            init: function () {
+                var length = (this.slides.length - 2) > 10 ? this.slides.length - 2 : '0' + (this.slides.length - 2);
+                $('.i-pagination .length').text(length);
+                $('.i-pagination .active').text('01');
+                swiperAnimateCache(this); //隐藏动画元素
+                swiperAnimate(this); //初始化完成开始动画
+            },
+            slideChangeTransitionStart: function () {
+            },
+            slideChangeTransitionEnd: function () {
+                swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+                var index = this.realIndex + 1 > 10 ? this.realIndex + 1 : "0" + (this.realIndex + 1);
+                $('.i-pagination .active').text(index);
+            },
+        }
+    });
+
+    var swiper3 = new Swiper(".swiper-container3", {
+        // loop: true,
+        spaceBetween: 70,
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".swiper-container2", {
+        loop: true,
+        spaceBetween: 10,
+        effect: 'fade',
+        navigation: {
+            nextEl: ".swiper-button-next2",
+            prevEl: ".swiper-button-prev2",
+        },
+        thumbs: {
+            swiper: swiper3,
+        },
+    });
+    var swiper4 = new Swiper(".swiper-container4", {
+        speed: 1000,
+        spaceBetween: 1,
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: ".swiper-button-next4",
+            prevEl: ".swiper-button-prev4",
+        },
+    });
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="<?php echo $seo_keywords;?>"/>
+    <meta name="description" content="<?php echo $seo_description;?>"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+    <title><?php echo $seo_title;?></title>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/fullpage.css"/>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/global_css.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/demo.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/dome.css">
+</head>
+
+<body>
+<?php echo $contact['nav'];?>
+<div class="g_body n_body n_zy n_zy4">
+    <div class="n_banner">
+        <div class="g_bg" style="background-image: url('<?php echo $path.'banner_n/thumb/'.$contact['banner_n']['thumb'];?>')"></div>
+        <div class="text">
+            <div class="g_w">
+                <strong class="wow fadeInUp"><?php echo $contact['banner_n']['title3'];?></strong>
+                <b class="wow fadeInUp" data-wow-delay=".3s"><?php echo $contact['banner_n']['title4'];?></b>
+                <span class="wow fadeInUp" data-wow-delay=".5s"><?php echo $contact['banner_n']['title5'];?></span>
+            </div>
+        </div>
+    </div>
+    <?php echo $contact['nav_resource'];?>
+    <div class="n_con">
+        <div class="con1">
+            <div class="i_title">
+                <span>服务流程</span>
+                <p>Statement of impartiality and integrity</p>
+            </div>
+            <div class="con_view">
+                <div class="i_pro_view">
+                    <div class="i_pro_con">
+                        <span class="g_p_c circle circle1"></span>
+                        <span class="g_p_c circle circle2"></span>
+                        <span class="g_p_c circle circle3"></span>
+                        <div class="i_pro_tanNav">
+                            <a class="active" href="javascript:;" >
+                                <span>01 咨询沟通</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>02 提供检测分析方案</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>03 签约付款</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>04 现场取样或寄送样品</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>05 分析测试</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>06 寄送纸质报告和发票</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>07 反馈问题</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>08 后续技术服务</span>
+                            </a>
+                        </div>
+                        <div class="i_pro_tanBody">
+                            <div class="i_pro_tanCon active">
+                                <i class="iconfont icon-hetongfukuan"></i>
+                                <b class="title">01</b>
+                                <p class="text">
+                                    咨询沟通
+                                </p>
+                            </div>
+                            <div class="i_pro_tanCon ">
+                                <i class="iconfont icon-hetongfukuan"></i>
+                                <b class="title">02</b>
+                                <p class="text">
+                                    提供检测分析方案
+                                </p>
+                            </div>
+                            <div class="i_pro_tanCon ">
+                                <i class="iconfont icon-hetongfukuan"></i>
+                                <b class="title">03</b>
+                                <p class="text">
+                                    签约付款
+                                </p>
+                            </div>
+                            <div class="i_pro_tanCon ">
+                                <i class="iconfont icon-hetongfukuan"></i>
+                                <b class="title">04</b>
+                                <p class="text">
+                                    现场取样或寄送样品
+                                </p>
+                            </div>
+                            <div class="i_pro_tanCon ">
+                                <i class="iconfont icon-hetongfukuan"></i>
+                                <b class="title">05</b>
+                                <p class="text">
+                                    分析测试
+                                </p>
+                            </div>
+                            <div class="i_pro_tanCon ">
+                                <i class="iconfont icon-hetongfukuan"></i>
+                                <b class="title">06</b>
+                                <p class="text">
+                                    寄送纸质报告和发票
+                                </p>
+                            </div>
+                            <div class="i_pro_tanCon ">
+                                <i class="iconfont icon-hetongfukuan"></i>
+                                <b class="title">07</b>
+                                <p class="text">
+                                    反馈问题
+                                </p>
+                            </div>
+                            <div class="i_pro_tanCon ">
+                                <i class="iconfont icon-hetongfukuan"></i>
+                                <b class="title">08</b>
+                                <p class="text">
+                                    后续技术服务
+                                </p>
+                            </div>
+
+                        </div>
+                        <canvas id="canvas" ></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="con2">
+            <div class="g_w">
+                <div class="n_about4">
+                    <div class="con1">
+                        <div class="view">
+                            <div class="item g_r28">
+                                <span class="title g_gradient1_r">测试前</span>
+                                <div class="p">
+                                    <p>需来电、传真、邮件或当面沟通，确定样品情况、测试标准及报告时间等。</p>
+                                    <p>联系方式如下：</p>
+                                    <p><i class="iconfont icon-dianhua3"></i>热线：  400-8065-995</p>
+                                    <p><i class="iconfont icon-shouji"></i>手机：18765957760</p>
+                                    <p><i class="iconfont icon-qq1"></i>Q  Q： 800189908</p>
+                                    <p><i class="iconfont icon-youxiang"></i>邮箱：standard@sitande.com</p>
+                                </div>
+                            </div>
+                            <div class="item g_r28">
+                                <span class="title g_gradient1_r">测试后</span>
+                                <div class="p">
+                                    <p>企业根据解决方案在后期实际研发过程中遇到相关技术问题，可第一时间反馈我中心，我中心会给企业出具优化解决方案；</p>
+                                    <br>
+                                    <p><i class="iconfont icon-dianhua3"></i>售后服务电话：0532-58668377</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo $contact['nav_footer'];?>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper-4.2.6.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper.animate1.0.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/wow.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/hc-mobile-nav.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/global.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/tween.umd.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/circle.js"></script>
+<script>
+
+    circleInit(8)
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="<?php echo $seo_keywords;?>"/>
+    <meta name="description" content="<?php echo $seo_description;?>"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+    <title><?php echo $seo_title;?></title>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/fullpage.css"/>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/global_css.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/demo.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/dome.css">
+</head>
+
+<body>
+<?php echo $contact['nav'];?>
+<div class="g_body n_body n_zy n_zy8 n_zy8_d">
+    <div class="n_banner">
+        <div class="g_bg" style="background-image: url('<?php echo $path.'banner_n/thumb/'.$contact['banner_n']['thumb'];?>')"></div>
+        <div class="text">
+            <div class="g_w">
+                <strong class="wow fadeInUp"><?php echo $contact['banner_n']['title3'];?></strong>
+                <b class="wow fadeInUp" data-wow-delay=".3s"><?php echo $contact['banner_n']['title4'];?></b>
+                <span class="wow fadeInUp" data-wow-delay=".5s"><?php echo $contact['banner_n']['title5'];?></span>
+            </div>
+        </div>
+    </div>
+    <?php echo $contact['nav_resource'];?>
+    <div class="n_con">
+        <div class="con1">
+            <div class="g_w">
+                <div class="n_zy8_nav">
+                    <?php if (!empty($category)) {
+                    foreach ($category as $v) { ?>
+                    <a class="g_r46 <?php if ($cate_id == $v['id']){echo 'active';}?>" href="<?php echo $v['short_url'];?>"><?php echo $v['title1'];?></a>
+                    <?php }
+                    }?>
+                </div>
+                <div class="detail">
+                    <div class="detail_l">
+                        <div class="detail_view g_r">
+                            <div class="detail_title">
+                                <b><?php echo $detail['title1'];?></b>
+                                <span><i class="iconfont icon-shijian1"></i> <?php echo date('Y-m-d', $detail['time1']);?></span>
+                            </div>
+                            <div class="detail_text">
+                                <?php echo $detail['content1'];?>
+                            </div>
+                            <a class="back" href="javascript:history.go(-1)"><i class="iconfont icon-fanhui"></i>返回</a>
+                            <div class="bottom">
+                                <?php if ($pre) { ?>
+                                <a class="g_r8" href="<?php echo $pre['short_url'];?>"><i class="iconfont icon-a-shangyipianfuben2 g_gradient1_r"></i> <span>上一篇：<?php echo $pre['title1'];?></span></a>
+                                <?php } else { ?>
+                                <a class="g_r8" href="javascript:;"><i class="iconfont icon-a-shangyipianfuben2 g_gradient1_r"></i> <span>上一篇：暂无</span></a>
+                                <?php }?>
+                                
+                                <?php if ($next) { ?>
+                                <a class="g_r8" href="<?php echo $next['short_url'];?>"><i class="iconfont icon-a-shangyipianfuben2 g_gradient1_r"></i> <span>下一篇：<?php echo $next['title1'];?></span></a>
+                                <?php } else { ?>
+                                <a class="g_r8" href="javascript:;"><i class="iconfont icon-a-shangyipianfuben2 g_gradient1_r"></i> <span>下一篇：暂无</span></a>
+                                <?php }?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail_r">
+                        <div class="list">
+                            <?php if (!empty($related)) {
+                            foreach ($related as $v) { ?>
+                            <div class="item">
+                                <a href="<?php echo $v['short_url'];?>">
+                                    <div class="after">
+                                        <div class="top">
+                                            <div class="date">
+                                                <b><?php echo date('m-d', $v['time1']);?></b>
+                                                <span><?php echo date('Y', $v['time1']);?></span>
+                                            </div>
+                                            <i class="iconfont icon-xinwenyingxiaoxinwenzhuanxie"></i>
+                                        </div>
+                                        <div class="img">
+                                            <div class="g_bg" style="background-image: url('<?php echo $base_url;?>uploads/images/n_zy8_1.jpg');"></div>
+                                        </div>
+                                        <div class="text">
+                                            <div class="title"><?php echo $v['title1'];?></div>
+                                            <div class="p">
+                                                <?php echo $v['description1'];?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="before">
+                                        <div class="top">
+                                            <div class="date">
+                                                <b><?php echo date('m-d', $v['time1']);?></b>
+                                                <span><?php echo date('Y', $v['time1']);?></span>
+                                            </div>
+                                            <i class="iconfont icon-xiangyou-jiantou"></i>
+                                        </div>
+                                        <div class="title"><?php echo $v['title1'];?></div>
+                                        <div class="p">
+                                            <?php echo ellipsize($v['content1'], 150);?>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <?php }
+                            }?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo $contact['nav_footer'];?>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper-4.2.6.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper.animate1.0.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/wow.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/hc-mobile-nav.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/global.js"></script>
+<script>
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="<?php echo $seo_keywords;?>"/>
+    <meta name="description" content="<?php echo $seo_description;?>"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+    <title><?php echo $seo_title;?></title>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/fullpage.css"/>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/global_css.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/demo.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/dome.css">
+</head>
+
+<body>
+<?php echo $contact['nav'];?>
+<div class="g_body n_body n_about n_about5">
+    <div class="n_banner">
+        <div class="g_bg" style="background-image: url('<?php echo $path.'banner_n/thumb/'.$contact['banner_n']['thumb'];?>')"></div>
+        <div class="text">
+            <div class="g_w">
+                <strong class="wow fadeInUp"><?php echo $contact['banner_n']['title3'];?></strong>
+                <b class="wow fadeInUp" data-wow-delay=".3s"><?php echo $contact['banner_n']['title4'];?></b>
+                <span class="wow fadeInUp" data-wow-delay=".5s"><?php echo $contact['banner_n']['title5'];?></span>
+            </div>
+        </div>
+    </div>
+    <?php echo $contact['nav_about'];?>
+    <div class="n_con">
+        <div class="con1">
+            <div class="g_w">
+                <div class="i_title"><span>计量标准证书</span></div>
+                <div class="list">
+                    <?php if (!empty($list)) {
+                    foreach ($list as $v) { ?>
+                    <div class="item g_r">
+                        <span class="title"><?php echo $v['title1'];?></span>
+                        <div class="item_btn">
+                            <a class="g_gradient1_r" href="<?php echo $base_url.'uploads/files/'.$v['fujian'];?>" target="_blank"><i class="iconfont icon-chakan"></i> 预览</a>
+                            <!-- <a class="g_gradient1_r" href="<?php echo $base_url.'uploads/files/'.$v['fujian'];?>" download="<?php echo $v['fujian'];?>"><i class="iconfont icon-xiazai"></i> 下载</a> -->
+                            <a class="g_gradient1_r" href="<?php echo site_url('standard/download/'.$v['id']);?>"><i class="iconfont icon-xiazai"></i> 下载</a>
+                        </div>
+                    </div>
+                    <?php }
+                    }?>
+                </div>
+                <div class="fenye">
+                    <?php if ($pre) { ?>
+                    <a href="<?php echo $pre_url;?>"><i class="iconfont icon-zuo"></i></a>
+                    <?php if ($less) { ?>
+                    <a href="<?php echo $less_url;?>"><?php echo $less;?></a>
+                    <a href="<?php echo $pre_url;?>"><?php echo $pre;?></a>
+                    <?php } else { ?>
+                    <a href="<?php echo $pre_url;?>"><?php echo $pre;?></a>
+                    <?php }
+                    } else { ?>
+                    <a class="cur zuo" href="javascript:;"><i class="iconfont icon-zuo"></i></a>
+                    <?php }?>
+                    <a href="javascript:;" class="active"><?php echo $page;?></a>
+                    <?php if ($next) {
+                    if ($more) { ?>
+                    <a href="<?php echo $next_url;?>"><?php echo $next;?></a>
+                    <a href="<?php echo $more_url;?>"><?php echo $more;?></a>
+                    <a href="<?php echo $next_url;?>"><i class="iconfont icon-zuo"></i></a>
+                    <?php } else { ?>
+                    <a href="<?php echo $next_url;?>"><?php echo $next;?></a>
+                    <a href="<?php echo $next_url;?>"><i class="iconfont icon-zuo"></i></a>
+                    <?php }
+                    } else { ?>
+                    <a class="cur" href="javascript:;"><i class="iconfont icon-zuo"></i></a>
+                    <?php }?>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<?php echo $contact['nav_footer'];?>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper-4.2.6.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper.animate1.0.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/wow.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/hc-mobile-nav.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/global.js"></script>
+<script>
+
+
+</script>
+
+</body>
+
+</html>

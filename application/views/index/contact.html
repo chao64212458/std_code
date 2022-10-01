@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="<?php echo $seo_keywords;?>"/>
+    <meta name="description" content="<?php echo $seo_description;?>"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+    <title><?php echo $seo_title;?></title>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/fullpage.css"/>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/global_css.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/demo.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/dome.css">
+</head>
+
+<body>
+<?php echo $contact['nav'];?>
+<div class="g_body n_body n_contact">
+    <div class="n_banner">
+        <div class="g_bg" style="background-image: url('<?php echo $path.'banner_n/thumb/'.$contact['banner_n']['thumb'];?>')"></div>
+        <div class="text">
+            <div class="g_w">
+                <strong class="wow fadeInUp"><?php echo $contact['banner_n']['title3'];?></strong>
+                <b class="wow fadeInUp" data-wow-delay=".3s"><?php echo $contact['banner_n']['title4'];?></b>
+                <span class="wow fadeInUp" data-wow-delay=".5s"><?php echo $contact['banner_n']['title5'];?></span>
+            </div>
+        </div>
+    </div>
+    <div class="n_nav">
+        <div class="g_w">
+            <div class="n_nav_con">
+                <a class="active" href="#link1">
+                    <div>
+                        <i class="iconfont icon-liuyan2"></i>
+                        <span>联系方式</span>
+                    </div>
+                </a>
+                <a href="#link3">
+                    <div>
+                        <i class="iconfont icon-liuyan2"></i>
+                        <span>在线留言</span>
+                    </div>
+                </a>
+                <a class=" g_m_btn" href="javascript:;">
+                    <div>
+                        <i class="iconfont icon-liuyan1"></i>
+                        <span>在线咨询</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="n_con">
+        <div id="link1" class="con1">
+            <div class="g_w">
+                <div class="n_contact_title">
+                    <b>联系斯坦德集团</b>
+                    <span>和我们一起推进行业</span>
+                </div>
+                <ul>
+                    <li>
+                        <a class="g_btn g_m_btn" href="javascript:;">
+                            <span class="g_r g_gradient1_r">立即咨询</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="name"><i class="iconfont icon-dianhua5"></i>全国服务热线：</span>
+                        <b class="text"><?php echo $detail['title1'];?></b>
+                    </li>
+                    <li>
+                        <span class="name"><i class="iconfont icon-dizhi2"></i>实验室地址：</span>
+                        <p><?php echo $detail['title4'];?></p>
+                    </li>
+                    <li>
+                        <span class="name"><i class="iconfont icon-dianhua"></i>售后投诉电话：</span>
+                        <b class="text"><?php echo $detail['title2'];?></b>
+                    </li>
+                    <li>
+                        <span class="name"><i class="iconfont icon-qq1"></i>技术咨询QQ：</span>
+                        <b class="text"><?php echo $detail['title3'];?></b>
+                    </li>
+                    <li>
+                        <span class="name"><i class="iconfont icon-qq1"></i>企业邮箱：</span>
+                        <b class="text"><?php echo $detail['title5'];?></b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="con2">
+            <div class="g_w">
+                <ul class="g_r g_gradient1_r">
+                    <li>
+                        <p><i class="iconfont icon-dianhua"></i> 技术咨询热线1：<?php echo $detail['title6'];?></p>
+                        <p><i class="iconfont icon-dianhua"></i> 技术咨询热线2：<?php echo $detail['title7'];?></p>
+                    </li>
+                    <li>
+                        <p><i class="iconfont icon-dianhua"></i> 技术咨询热线3：<?php echo $detail['title8'];?></p>
+                        <p><i class="iconfont icon-dianhua"></i> 技术咨询热线4：<?php echo $detail['title9'];?></p>
+                    </li>
+                    <li>
+                        <div class="code">
+                            <span>部分现场取样并接收全国寄样</span>
+                            <img class="g_r8" src="<?php echo $path.'page/thumb/'.$detail['thumb'];?>" alt="">
+                            <em>期待您的关注</em>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="link3" class="con3">
+            <div class="g_w">
+                <div class="con_l">
+                    <div class="i_title">
+                        <strong>斯坦德集团布局全国</strong>
+                        <span>建立一站式研发检测机构</span>
+                    </div>
+                    <div class="form_view">
+                        <span class="name">在线留言</span>
+                        <input class="g_r8" type="text" placeholder="您的称呼*" id="name">
+                        <input class="g_r8" type="text" placeholder="联系电话*" id="tel">
+                        <input class="g_r8" type="text" placeholder="电子邮箱*" id="email">
+                        <textarea class="g_r8" placeholder="检测需求*" id="message"></textarea>
+                        <div class="verification">
+                            <input class="g_r8" type="text" placeholder="请输入验证码">
+                            <canvas id="canvas" class="g_r8"></canvas>
+                        </div>
+                        <button class="g_btn">
+                            <span class="g_r g_gradient1_r">提交</span>
+                        </button>
+                    </div>
+                </div>
+                <script>
+
+                </script>
+                <div class="con_r">
+                    <div class="img"><img src="<?php echo $path.'page/thumb/'.$map['thumb'];?>" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo $contact['nav_footer'];?>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper-4.2.6.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper.animate1.0.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/wow.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/hc-mobile-nav.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/global.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/code.js"></script>
+<script>
+    var show_num1 = [];
+    draw(show_num1,140,40,'canvas');
+    $('#canvas').click(function () {
+        draw(show_num1,140,40,'canvas');
+    });
+    $('.form_view .g_btn').click(function () {
+        send_message()
+    });
+    function send_message() {
+        var name = $('#name').val();
+        var tel = $('#tel').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
+        var code = $('.verification').val().toLowerCase();
+        var code_data = show_num1.join("");
+
+        if (code != code_data) {
+            alert('验证码错误');
+            return false;
+        }
+
+        $.post("<?php echo site_url('message/send_message');?>", {name:name,tel:tel,email:email,message:message}, function(data) {
+            if (data.status == 1) {
+                alert(data.message);
+            } else {
+                alert(data.message);
+                location.reload(true);
+            }
+        }, 'json');
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="<?php echo $seo_keywords;?>"/>
+    <meta name="description" content="<?php echo $seo_description;?>"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+    <title><?php echo $seo_title;?></title>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/fullpage.css"/>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/global_css.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/demo.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/dome.css">
+</head>
+
+<body>
+<?php echo $contact['nav'];?>
+<div class="g_body n_body n_about n_about2">
+    <div class="n_banner">
+        <div class="g_bg" style="background-image: url('<?php echo $path.'banner_n/thumb/'.$contact['banner_n']['thumb'];?>')"></div>
+        <div class="text">
+            <div class="g_w">
+                <strong class="wow fadeInUp"><?php echo $contact['banner_n']['title3'];?></strong>
+                <b class="wow fadeInUp" data-wow-delay=".3s"><?php echo $contact['banner_n']['title4'];?></b>
+                <span class="wow fadeInUp" data-wow-delay=".5s"><?php echo $contact['banner_n']['title5'];?></span>
+            </div>
+        </div>
+    </div>
+    <?php echo $contact['nav_about'];?>
+    <div class="n_con">
+        <div class="con1">
+            <div class="g_w">
+                <div class="con_l wow fadeInUp" data-wow-delay="">
+                    <div class="img wow fadeInUp" data-wow-delay="">
+                        <div class="g_bg g_r" style="background-image: url('<?php echo $path.'page/thumb/'.$detail['thumb'];?>')"></div>
+                    </div>
+                </div>
+                <div class="con_r wow fadeInUp" data-wow-delay=".3s">
+                    <div class="top">
+                        <div class="i_title">
+                            <em>Disclaimer</em>
+                            <span>免责声明</span>
+                        </div>
+                        <img src="<?php echo $base_url;?>uploads/images/n_about2_2.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <?php echo $detail['content1'];?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="con2">
+            <div class="g_w">
+                <div class="view g_r46 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="top">
+                        <div class="i_title">
+                            <span>声明</span>
+                        </div>
+                        <img src="<?php echo $base_url;?>uploads/images/n_about2_4.png" alt="">
+                    </div>
+                    <div class="text">
+                        <?php echo $detail['content2'];?>
+                    </div>
+                    <a class="g_btn g_m_btn" href="javascript:;">
+                        <span class="g_r g_gradient1_r">在线联系客服咨询</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo $contact['nav_footer'];?>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper-4.2.6.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper.animate1.0.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/wow.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/hc-mobile-nav.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/global.js"></script>
+<script>
+
+
+</script>
+
+</body>
+
+</html>

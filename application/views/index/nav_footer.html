@@ -1,0 +1,103 @@
+<footer>
+    <div class="g_w">
+        <div class="f_top">
+            <div class="con_l">
+                <div class="logo"><img src="<?php echo $base_url;?>uploads/images/logo2.png" alt=""></div>
+                <div class="info">
+                    <p>
+                        服务热线：<br>
+                        <b><?php echo $base['contact_info']['title1'];?></b>
+                    </p>
+                    <p>售后投诉：<?php echo $base['contact_info']['title2'];?></p>
+                    <p>技术咨询：<?php echo $base['contact_info']['title6'];?></p>
+                    <p>企业邮箱：sitande@stdjituan.com</p>
+                    <p>企业Q Q：<?php echo $base['contact_info']['title3'];?></p>
+                    <p>企业地址：<?php echo $base['contact_info']['title10'];?></p>
+                </div>
+            </div>
+            <div class="con_r">
+                <ul>
+                    <li>
+                        <div>
+                            <a href="<?php echo site_url('solution');?>">行业解决方案</a>
+                            <div class="a">
+                                <?php if (!empty($solution_category)) {
+                                foreach ($solution_category as $v) { ?>
+                                <a href="<?php echo $v['short_url'];?>"><?php echo $v['title1'];?></a>
+                                <?php }
+                                }?>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="<?php echo site_url('service');?>">我们的服务</a>
+                            <div class="a">
+                                <?php if (!empty($service_category)) {
+                                foreach ($service_category as $v) { ?>
+                                <a href="<?php echo $v['short_url'];?>"><?php echo $v['title1'];?></a>
+                                <?php }
+                                }?>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="<?php echo site_url('about');?>">关于斯坦德</a>
+                            <div class="a">
+
+                                <a href="<?php echo site_url('about');?>">集团简介</a>
+                                <a href="<?php echo site_url('about/disclaimer');?>">免责声明</a>
+                                <a href="<?php echo site_url('about');?>">荣誉资质</a>
+                                <a href="<?php echo site_url('about/complaints');?>">投诉举报</a>
+                                <a href="<?php echo site_url('standard');?>">计量标准证书</a>
+                                <a href="<?php echo site_url('about/statement');?>">公正性和诚信声明</a>
+                                <a href="<?php echo site_url('about');?>#link2">服务网络</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="<?php echo site_url('test_application');?>">资源中心</a>
+                            <div class="a">
+
+                                <a href="https://www.std.cn/shengming.php" target="_blank">报告核验平台</a>
+                                <a href="http://chaxun.sitande.com:18899/#/" target="_blank">委托单查询</a>
+                                <a href="<?php echo site_url('test_application');?>">测试申请表下载</a>
+                                <a href="<?php echo site_url('flow');?>">服务流程</a>
+                                <a href="<?php echo site_url('question');?>">常见问题</a>
+                                <a href="<?php echo site_url('cases');?>">成功案例</a>
+                                <a href="<?php echo site_url('news');?>">新闻资讯</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="<?php echo site_url('contact');?>">联系我们</a>
+                            <div class="a">
+
+                                <a href="<?php echo site_url('contact');?>#link3">在线留言</a>
+                                <a href="<?php echo site_url('contact');?>">在线咨询</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="f_bottom">
+            <div class="con_l">
+                <span>Copyright © 2022  斯坦德检测集团股份有限公司  All rights reserved</span>
+                <a href="https://www.websitor.cn">技术支持 | 新视点网络</a>
+            </div>
+            <div class="con_r">
+                <a href="">
+                    <div class="code"><img src="<?php echo $base_url;?>uploads/images/code.jpg" alt=""></div>
+                    <i class="iconfont icon-zixun1"></i>
+                </a>
+                <a href=""><i class="iconfont icon-qq1"></i></a>
+                <a href=""><i class="iconfont icon-zaixiankefu"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>

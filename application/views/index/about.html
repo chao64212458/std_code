@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="<?php echo $seo_keywords;?>"/>
+    <meta name="description" content="<?php echo $seo_description;?>"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+    <title><?php echo $seo_title;?></title>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url;?>uploads/css/fullpage.css"/>
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/global_css.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/demo.css">
+    <link rel="stylesheet" href="<?php echo $base_url;?>uploads/css/dome.css">
+</head>
+
+<body>
+<?php echo $contact['nav'];?>
+<div class="g_body n_body n_about n_about1">
+    <div class="n_banner">
+        <div class="g_bg" style="background-image: url('<?php echo $path.'banner_n/thumb/'.$contact['banner_n']['thumb'];?>')"></div>
+        <div class="text">
+            <div class="g_w">
+                <strong class="wow fadeInUp"><?php echo $contact['banner_n']['title3'];?></strong>
+                <b class="wow fadeInUp" data-wow-delay=".3s"><?php echo $contact['banner_n']['title4'];?></b>
+                <span class="wow fadeInUp" data-wow-delay=".5s"><?php echo $contact['banner_n']['title5'];?></span>
+            </div>
+        </div>
+    </div>
+    <?php echo $contact['nav_about'];?>
+    <div class="n_con">
+        <div class="con1">
+            <div class="g_w">
+                <div class="i_title">
+                    <b>group profile</b>
+                    <span><img src="<?php echo $base_url;?>uploads/images/n_about1_11.png" alt=""> 集团简介</span>
+                </div>
+                <div class="view">
+                    <div class="con_l">
+                        <div class="text">
+                            <?php echo $detail['content1'];?>
+                        </div>
+                    </div>
+                    <div class="con_r">
+                        <div class="video  g_r18">
+                            <i class="icon-shipin iconfont g_p_c"></i>
+                            <div class="g_bg" style="background-image: url('<?php echo $base_url;?>uploads/images/n_about1_1.jpg')"></div>
+                            <video src="<?php echo $base_url;?>uploads/media/video.mp4" controls></video>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="con2" id="link2">
+            <div class="g_w">
+                <div class="con_l">
+                    <div class="i_title">
+                        <span><img src="<?php echo $path.'page/thumb/'.$map['thumb'];?>" alt=""> 服务网络</span>
+                        <p>斯坦德集团布局全国丨建立一站式研发检测机构</p>
+                    </div>
+                    <div class="list">
+                        <div class="top">
+                            <b>核心服务推荐</b>
+                            <a class="g_btn " href="<?php echo site_url('service');?>">
+                                <span class="g_r12 g_gradient1_r"> 查看更多</span>
+                            </a>
+                        </div>
+                        <?php if (!empty($service_category)) { $m_order = 1;
+                        foreach ($service_category as $v) { if ($m_order > 3) {break;} ?>
+                        <div class="item">
+                            <a href="<?php echo $v['short_url'];?>">
+                                <div class="item_l">
+                                    <div class="img">
+                                        <div class="g_bg" style="background-image: url('<?php echo $path.'service/category/'.$v['thumb'];?>')"></div>
+                                    </div>
+                                </div>
+                                <div class="item_r">
+                                    <div class="text">
+                                        <div class="title">
+                                            <?php echo $v['title1'];?>
+                                            <i class="iconfont <?php echo $v['title2'];?>"></i>
+                                        </div>
+                                        <p>
+                                            <?php echo $v['description1'];?>
+                                        </p>
+                                        <span class=" g_btn "><span  class="g_r8 g_gradient1_r">查看详情</span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <?php $m_order++; }
+                        }?>
+                    </div>
+                </div>
+                <div class="con_r">
+                    <div class="img"><img src="<?php echo $base_url;?>uploads/images/n_fa_d9.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="con3" id="link3">
+            <div class="g_w">
+                <div class="top">
+                    <div class="con_l">
+                        <div class="i_title"><span>资质荣誉</span></div>
+                        <div class="tab_nav">
+                            <?php if (!empty($certificate_category)) {
+                            foreach ($certificate_category as $v) { ?>
+                            <a class="g_r" href="javascript:;"><?php echo $v['title1'];?></a>
+                            <?php }
+                            }?>
+                        </div>
+                        <div class="swiper_btn swiper-button-prev1 swiper-button-prev"><i class="iconfont icon-zuo"></i></div>
+                        <div class="swiper_btn swiper-button-next1 swiper-button-next"><i class="iconfont icon-zuo"></i></div>
+                    </div>
+                    <div class="con_r">
+                        <div class="tab_body">
+                            <?php if (!empty($certificate_category)) { $m_order = 1;
+                            foreach ($certificate_category as $v) { ?>
+                            <div class="tab_con <?php if ($m_order == 1) {echo 'active';}?>">
+                                <div class="swiper_con">
+                                    <div class="swiper-container swiper-container1">
+                                        <div class="swiper-wrapper">
+                                            <?php if (!empty($v['child'])) {
+                                            foreach ($v['child'] as $v_child) { ?>
+                                            <div class="swiper-slide">
+                                                <div class="img g_r">
+                                                    <img class="g_p_c" src="<?php echo $path.'certificate/thumb/'.$v_child['thumb'];?>" alt="<?php echo $v_child['thumb_alt'] ? $v_child['thumb_alt'] : $v_child['title1'];?>">
+                                                    <span><?php echo $v_child['title1'];?></span>
+                                                </div>
+                                            </div>
+                                            <?php }
+                                            }?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php $m_order++; }
+                            }?>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="item">
+                        <p><b>9</b>项</p>
+                        <p>制/修订标准9项</p>
+                    </div>
+                    <div class="item">
+                        <p><b>102</b>项</p>
+                        <p>授权国家专利102项</p>
+                    </div>
+                    <div class="item">
+                        <p><b>21</b>个</p>
+                        <p>软件著作权21个</p>
+                    </div>
+                    <div class="item">
+                        <p><b>18</b>篇</p>
+                        <p>科技论文发表18篇</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="con4" id="link4">
+            <div class="top">
+                <div class="g_w">
+                    <div class="view">
+                        <div class="con_l">
+                            <div class="i_title">
+                                <em>our equipment</em>
+                                <span>仪器设备</span>
+                            </div>
+                        </div>
+                        <div class="con_r">
+                            <div class="text">
+                                <p>通过不断积累与创新的“多元领域、数字智能、质量体系、服务网络”，斯坦德集团可为您提供检验检测、分析研发、计量校准、认证服务、产品质量鉴定、实验室规划建设、知识产权、标准化
+                                    /合理化建议等综合型科技服务。</p>
+                                <p style="margin-top: 10px;">
+                                    <b>我们的实验室覆盖全国各地区，16个分支机构可迅速响应您的需求，提供多元化的检测研发服务，为品质生活创享信任。</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="g_w">
+                    <div class="swiper_con">
+                        <div class="swiper-container swiper-container2">
+                            <div class="swiper-wrapper">
+                                <?php if (!empty($equitment)) {
+                                foreach ($equitment as $v) { ?>
+                                <div class="swiper-slide">
+                                    <div class="img">
+                                        <div class="g_bg g_r" style="background-image: url('<?php echo $path.'equitment/thumb/'.$v['thumb'];?>')"></div>
+                                    </div>
+                                    <p class="title"><?php echo $v['title1'];?></p>
+                                </div>
+                                <?php }
+                                }?>
+                            </div>
+                        </div>
+                        <div class="swiper_btn swiper-button-prev swiper-button-prev2"><i
+                                class="iconfont icon-zuo"></i></div>
+                        <div class="swiper_btn swiper-button-next swiper-button-next2"><i
+                                class="iconfont icon-zuo"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="con5">
+            <div class="g_w">
+                <div class="i_title"><span>斯坦德集团核心优势</span></div>
+                <div class="list">
+                    <?php if (!empty($advantage)) {
+                    foreach ($advantage as $v) { ?>
+                    <div class="item g_r18">
+                        <div class="img">
+                            <div class="g_bg" style="background-image: url('<?php echo $path.'advantage/thumb/'.$v['thumb'];?>')"></div>
+                        </div>
+                        <div class="text">
+                            <i class="iconfont <?php echo $v['title2'];?>"></i>
+                            <span><?php echo $v['title1'];?></span>
+                            <p><?php echo $v['description1'];?></p>
+                        </div>
+                    </div>
+                    <?php }
+                    }?>
+                </div>
+                <a class="g_btn g_m_btn" href="javascript:;">
+                    <span class="g_r g_gradient1_r">马上预约 免费为您提供解决方案</span>
+                </a>
+            </div>
+        </div>
+        <div class="i_con6">
+            <div class="g_w">
+                <div class="view">
+                    <div class="i_title">
+                        <span>他们已经与我们取得了合作</span>
+                    </div>
+                    <div class="list g_r">
+                        <?php if (!empty($partner)) {
+                        foreach ($partner as $v) { ?>
+                        <div class="item">
+                            <div class="img"><img src="<?php echo $path.'partner/thumb/'.$v['thumb'];?>" alt="<?php echo $v['title1'];?>"></div>
+                        </div>
+                        <?php }
+                        }?>
+                        <div class="item">
+                            <div class="img">
+                                <a class="g_btn g_m_btn g_p_c" href="javascript:;">
+                                    <span class="g_r g_gradient1_r ">期待与您合作</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom"><img src="<?php echo $base_url;?>uploads/images/i_con6_12.png" alt=""></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<?php echo $contact['nav_footer'];?>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper-4.2.6.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/swiper.animate1.0.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/wow.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/hc-mobile-nav.js"></script>
+<script type="text/javascript" src="<?php echo $base_url;?>uploads/js/global.js"></script>
+<script>
+
+    var mySwiper = new Swiper('.swiper-container1', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 36,
+        observer: true,
+        observeParents: true,
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next1',
+            prevEl: '.swiper-button-prev1',
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+            },
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 8,
+            },
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 8,
+            }
+        }
+    });
+
+    var mySwiper2 = new Swiper('.swiper-container2', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 52,
+        observer: true,
+        observeParents: true,
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next2',
+            prevEl: '.swiper-button-prev2',
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+            },
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 8,
+            },
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 8,
+            }
+        }
+    });
+
+    $('.n_about1 .view .video').click(function () {
+        $(this).find('video').show()[0].play();
+        $(this).find('.g_bg').hide();
+        $(this).find('i').hide()
+    });
+
+    $('.tab_nav a').click(function () {
+        var index = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.tab_body .tab_con').eq(index).addClass('active').siblings().removeClass('active');
+    })
+</script>
+
+
+</body>
+
+</html>

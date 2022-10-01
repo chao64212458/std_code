@@ -1,0 +1,431 @@
+<header>
+    <div class="webNav">
+        <div class="wrapper cf">
+            <nav id="main-nav">
+                <ul class="first-nav">
+                    <li class="cryptocurrency">
+                        <a href="<?php echo site_url();?>">首页</a>
+
+                    </li>
+                </ul>
+                <ul class="second-nav">
+
+                    <li class="magazines">
+                        <a href="<?php echo site_url('solution');?>">行业解决方案</a>
+                        <ul>
+                            <?php if (!empty($solution_category)) {
+                            foreach ($solution_category as $v) { ?>
+                            <li>
+                                <a href="<?php echo $v['short_url'];?>"><?php echo $v['title1'];?></a>
+                                <ul>
+                                    <?php if (!empty($v['child'])) {
+                                    foreach ($v['child'] as $v_child) { ?>
+                                    <li>
+                                        <a href="<?php echo $v_child['short_url'];?>"><?php echo $v_child['title1'];?></a>
+                                        <ul>
+                                            <?php if (!empty($v_child['grandson'])) {
+                                            foreach ($v_child['grandson'] as $v_grandson) { ?>
+                                            <li><a href="<?php echo $v_grandson['short_url'];?>"><?php echo $v_grandson['title1'];?></a></li>
+                                            <?php }
+                                            }?>
+                                        </ul>
+                                    </li>
+                                    <?php }
+                                    }?>
+                                </ul>
+                            </li>
+                            <?php }
+                            }?>
+                        </ul>
+                    </li>
+                    <li class="devices">
+                        <a href="<?php echo site_url('service');?>">我们的服务</a>
+                        <ul>
+                            <?php if (!empty($service_category)) {
+                            foreach ($service_category as $v) { ?>
+                            <li>
+                                <a href="<?php echo $v['short_url'];?>"><?php echo $v['title1'];?></a>
+                                <ul>
+                                    <?php if (!empty($v['child'])) {
+                                    foreach ($v['child'] as $v_child) { ?>
+                                    <li>
+                                        <a href="<?php echo $v_child['short_url'];?>"><?php echo $v_child['title1'];?></a>
+                                        <ul>
+                                            <?php if (!empty($v_child['grandson'])) {
+                                            foreach ($v_child['grandson'] as $v_grandson) { ?>
+                                            <li><a href="<?php echo $v_grandson['short_url'];?>"><?php echo $v_grandson['title1'];?></a></li>
+                                            <?php }
+                                            }?>
+                                        </ul>
+                                    </li>
+                                    <?php }
+                                    }?>
+                                </ul>
+                            </li>
+                            <?php }
+                            }?>
+                        </ul>
+                    </li>
+                    <li class="store">
+                        <a href="<?php echo site_url('about');?>">关于斯坦德</a>
+                        <ul>
+                            <li>
+                                <a class="" href="<?php echo site_url('about');?>">集团简介</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('about/disclaimer');?>">免责声明</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('about');?>#link3">荣誉资质</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('about/complaints');?>">投诉举报</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('standard');?>">计量标准证书</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('about/statement');?>">公正性和诚信声明</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('about');?>#link2">服务网络</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="collections">
+                        <a href="<?php echo site_url('test_application');?>">资源中心</a>
+                        <ul>
+                            <li>
+                                <a class="" href="https://www.std.cn/shengming.php" target="_blank">报告核验平台</a>
+                            </li>
+                            <li>
+                                <a class="" href="http://chaxun.sitande.com:18899/#/" target="_blank">委托单查询</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('test_application');?>">测试申请表下载</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('flow');?>">服务流程</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('question');?>">常见问题</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('cases');?>">成功案例</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('discount_package');?>">优惠套餐</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('news');?>">新闻资讯</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="collections">
+                        <a href="<?php echo site_url('contact');?>">联系我们 </a>
+                        <ul>
+                            <li>
+                                <a class="" href="<?php echo site_url('contact');?>#link1">联系方式</a>
+                            </li>
+                            <li>
+                                <a class="" href="<?php echo site_url('contact');?>#link3">在线留言</a>
+                            </li>
+                            <li>
+                                <a class=" g_m_btn" href="javascript:;">在线咨询</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </nav>
+            <a class="toggle"><span></span>
+                <img src="<?php echo $base_url;?>uploads/images/logo.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="pcNav">
+        <div class="pcNav-top">
+            <div class="g_w">
+
+                    <div class="pcNav-l">
+                        <a class="logo" href="<?php echo site_url();?>"><img src="<?php echo $base_url;?>uploads/images/logo.png" alt=""></a>
+                    </div>
+                    <div class="pcNav-c">
+                        <ul class="h-nav1">
+                            <li class="<?php if ($module == 'solution') {echo 'active';}?>">
+                                <a href="<?php echo site_url('solution');?>">行业解决方案</a>
+                                <div class="pcNav_view g_r">
+                                    <div class="pcNav_view_l g_gradient2">
+                                        <ul>
+                                            <?php if (!empty($solution_category)) { $m_order = 1;
+                                    	foreach ($solution_category as $v) { ?>
+                                            <li class="<?php if ($m_order == 1) {echo 'active';}?>"><a href="javascript:;"><i class="iconfont <?php echo $v['title2'];?>"></i> <?php echo $v['title1'];?></a></li>
+                                            <?php $m_order++; }
+                                    	}?>
+                                        </ul>
+                                    </div>
+                                    <div class="pcNav_view_r">
+                                        <?php if (!empty($solution_category)) { $m_order = 1;
+                                    foreach ($solution_category as $v) { ?>
+                                        <div class="pcNav_view_list <?php if ($m_order == 1) {echo 'active';}?>">
+                                            <?php if (!empty($v['child'])) {
+                                    	foreach ($v['child'] as $v_child) { ?>
+                                            <div class="pcNav_view_row">
+                                                <div class="pcNav_view_title">
+                                                    <i class="icon"></i><a href="<?php echo $v_child['short_url'];?>"><b><?php echo $v_child['title1'];?></b></a><em></em>
+                                                </div>
+                                                <ul>
+                                                    <?php if (!empty($v_child['grandson'])) {
+                                            	foreach ($v_child['grandson'] as $v_grandson) { ?>
+                                                    <li><a href="<?php echo $v_grandson['short_url'];?>"><?php echo $v_grandson['title1'];?></a></li>
+                                                    <?php }
+                                            	}?>
+                                                </ul>
+                                            </div>
+                                            <?php }
+                                    	}?>
+                                        </div>
+                                        <?php $m_order++; }
+                                    }?>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="<?php if ($module == 'service') {echo 'active';}?>">
+                                <a href="<?php echo site_url('service');?>">我们的服务</a>
+                                <div class="pcNav_view g_r">
+                                    <div class="pcNav_view_l g_gradient2">
+                                        <ul>
+                                            <?php if (!empty($service_category)) { $m_order = 1;
+                                    	foreach ($service_category as $v) { ?>
+                                            <li class="<?php if ($m_order == 1) {echo 'active';}?>"><a href="javascript:;"><i class="iconfont <?php echo $v['title2'];?>"></i> <?php echo $v['title1'];?></a></li>
+                                            <?php $m_order++; }
+                                    	}?>
+                                        </ul>
+                                    </div>
+                                    <div class="pcNav_view_r">
+                                        <?php if (!empty($service_category)) { $m_order = 1;
+                                    foreach ($service_category as $v) { ?>
+                                        <div class="pcNav_view_list <?php if ($m_order == 1) {echo 'active';}?>">
+                                            <?php if (!empty($v['child'])) {
+                                    	foreach ($v['child'] as $v_child) { ?>
+                                            <div class="pcNav_view_row">
+                                                <div class="pcNav_view_title">
+                                                    <i class="icon"></i><a href="<?php echo $v_child['short_url'];?>"><b><?php echo $v_child['title1'];?></b></a><em></em>
+                                                </div>
+                                                <ul>
+                                                    <?php if (!empty($v_child['grandson'])) {
+                                            	foreach ($v_child['grandson'] as $v_grandson) { ?>
+                                                    <li><a href="<?php echo $v_grandson['short_url'];?>"><?php echo $v_grandson['title1'];?></a></li>
+                                                    <?php }
+                                            	}?>
+                                                </ul>
+                                            </div>
+                                            <?php }
+                                    	}?>
+                                        </div>
+                                        <?php $m_order++; }
+                                    }?>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="<?php if ($module == 'about') {echo 'active';}?>">
+                                <a href="<?php echo site_url('about');?>">关于斯坦德 </a>
+                                <div class="pcNav_view2 g_r18 pcNav_view">
+                                    <div class="pcNav_view2_l">
+                                        <div class="img">
+                                            <div class="g_bg g_r18" style="background-image: url('<?php echo $path.'page/thumb/'.$base['nav_about_img']['thumb'];?>')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="pcNav_view2_r ">
+                                        <div class="pcNav_view2_title">
+                                            <b>standard</b>
+                                            <span>关于斯坦德</span>
+                                            <em>About us</em>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('about');?>"><i class="icon"></i><b>集团简介</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('about/disclaimer');?>"><i class="icon"></i><b>免责声明</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('about');?>#link3"><i class="icon"></i><b>荣誉资质</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('about/complaints');?>"><i class="icon"></i><b>投诉举报</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('standard');?>"><i class="icon"></i><b>计量标准证书</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('about/statement');?>"><i class="icon"></i><b>公正性和诚信声明</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('about');?>#link2"><i class="icon"></i><b>服务网络</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="<?php if ($module == 'resource') {echo 'active';}?>">
+                                <a href="<?php echo site_url('test_application');?>">资源中心</a>
+                                <div class="pcNav_view2 g_r18 pcNav_view">
+                                    <div class="pcNav_view2_l">
+                                        <div class="img">
+                                            <div class="g_bg g_r18" style="background-image: url('<?php echo $path.'page/thumb/'.$base['nav_resource_img']['thumb'];?>')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="pcNav_view2_r ">
+                                        <div class="pcNav_view2_title">
+                                            <b>standard</b>
+                                            <span>资源中心</span>
+                                            <em>Resource Center</em>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a class="g_r18" href="https://www.std.cn/shengming.php" target="_blank"><i class="icon"></i><b>报告核验平台</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="http://chaxun.sitande.com:18899/#/" target="_blank"><i class="icon"></i><b>委托单查询</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('test_application');?>"><i class="icon"></i><b>测试申请表下载</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('flow');?>"><i class="icon"></i><b>服务流程</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('question');?>"><i class="icon"></i><b>常见问题</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('cases');?>"><i class="icon"></i><b>成功案例</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('discount_package');?>"><i class="icon"></i><b>优惠套餐</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('news');?>"><i class="icon"></i><b>新闻资讯</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="<?php if ($module == 'contact') {echo 'active';}?>">
+                                <a href="<?php echo site_url('contact');?>">联系我们</a>
+
+
+
+                                <div class="pcNav_view2 g_r18 pcNav_view">
+                                    <div class="pcNav_view2_l">
+                                        <div class="img">
+                                            <div class="g_bg g_r18" style="background-image: url('<?php echo $path.'page/thumb/'.$base['nav_contact_img']['thumb'];?>')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="pcNav_view2_r ">
+                                        <div class="pcNav_view2_title">
+                                            <b>standard</b>
+                                            <span>联系我们</span>
+                                            <em>contact us</em>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('contact');?>#link1"><i class="icon"></i><b>联系方式</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18" href="<?php echo site_url('contact');?>#link3"><i class="icon"></i><b>在线留言</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="g_r18 g_m_btn" href="javascript:;"><i class="icon"></i><b>在线咨询</b><i class="iconfont icon-zuo"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <form class="pcNav-r" action="<?php echo site_url('search/result');?>" method="get">
+                        <div class="nav_tel"><i class="iconfont icon-dianhua"></i>400-8065-995</div>
+                        <div class="nav_search"><i class="iconfont icon-ziyuan g_r g_gradient1"></i> <input type="text" name="keyword" placeholder="搜索">
+                        </div>
+                    </form>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="right_float">
+        <ul class="g_r8">
+            <li>
+                <a class="view" href="tel:+86 4008065995">
+                    <i class="iconfont icon-dianhua2"></i>
+                    <span>400电话</span>
+                </a>
+
+                <a class="before g_r8" href="tel:+86 4008065995">
+                    <i class="iconfont icon-dianhua2"></i>
+                    <p>4008065995</p>
+                </a>
+            </li>
+
+            <li class="toTop">
+                <a class="view" href="javascript:;">
+                    <i class="iconfont icon-zaixianzixun1"></i>
+                    <span>在线咨询</span>
+                </a>
+            </li>
+            <li>
+                <a class="view" href="<?php echo site_url('contact');?>#link3">
+                    <i class="iconfont icon-liuyan"></i>
+                    <span>在线留言</span>
+                </a>
+
+            </li>
+            <li class="pc">
+                <a class="view" href="tencent://message/?uin=&amp;Site=400301.com&amp;Menu=yes">
+                    <i class="iconfont icon-qq"></i>
+                    <span>QQ咨询</span>
+                </a>
+                <a target="_blank" href="tencent://message/?uin=&amp;Site=400301.com&amp;Menu=yes"
+                   class="before  g_r8">
+                    <i class="iconfont icon-qq"></i>
+                    <p>
+                        <span>在线点击咨询</span>
+                        <span>Click consult online</span>
+                    </p>
+                </a>
+
+            </li>
+            <li class="web">
+                <a class="view" href="mqqwpa://im/chat?chat_type=wpa&amp;uin=&amp;version=1&amp;src_type=web&amp;web_src=oicqzone.com">
+                    <i class="iconfont icon-qq"></i>
+                    <span>QQ咨询</span>
+                </a>
+                <a target="_blank"
+                   href="mqqwpa://im/chat?chat_type=wpa&amp;uin=&amp;version=1&amp;src_type=web&amp;web_src=oicqzone.com"
+                   class="before  g_r8">
+                    <i class="iconfont icon-qq"></i>
+                    <p>
+                        <span>在线点击咨询</span>
+                        <span>Click consult online</span>
+                    </p>
+                </a>
+
+            </li>
+            <li class="toTop">
+                <a class="view" href="javascript:;">
+                    <i class="iconfont icon-bxs-to-top"></i>
+                    <span>返回顶部</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- <a class="toTop  web_top " href="javascript:;">
+        <i class="iconfont icon-bxs-to-top"></i>
+    </a> -->
+
+</header>
